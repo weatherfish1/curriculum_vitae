@@ -3,61 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twoje Imię i Nazwisko - CV</title>
+    <title>Moje CV</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h1 {
-    text-align: center;
-}
-
-h2, h3 {
-    margin-top: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .cv-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .sidebar {
+            background-color: #054588;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+        .sidebar h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .photo-placeholder {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 30px auto;
+        }
+        .sidebar p {
+            font-size: 0.9em;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar p .icon {
+            margin-right: 8px;
+        }
+        .languages {
+            margin-top: 40px;
+        }
+        .languages h2 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .languages ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 0.9em;
+        }
+        .languages ul li {
+            margin: 5px 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: #054588;
+            font-size: 1.2em;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #054588;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .section ul li:nth-child(1) {
+            font-size: 1em;
+        }
+        .section ul li:nth-child(2) {
+            font-size: 0.9em;
+        }
+        .section ul li:nth-child(n+3) {
+            font-size: 0.8em;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .section:nth-of-type(2) {
+            margin-top: 40px;
+        }
+        .section:nth-of-type(3) {
+            margin-top: 40px;
+        }
+        .section:nth-of-type(1) {
+            margin-top: 40px;
+        }
+        .content h1 {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 0;
+        }
+        .content h1::after {
+            content: "";
+            display: block;
+            margin-top: 10px;
+            width: 70%;
+            border-bottom: 2px solid #054588;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Twoje Imię i Nazwisko</h1>
-    <h2>Tytuł zawodowy</h2>
-    <h3>Kontakt</h3>
-    <p>Twój adres email</p>
-    <p>Twój numer telefonu</p>
-    <p>Link do Twojego profilu na LinkedIn</p>
-
-    <h3>Podsumowanie</h3>
-    <p>Krótki opis Twoich umiejętności i doświadczenia.</p>
-
-    <h3>Doświadczenie</h3>
-    <ul>
-        <li>
-            <h4>Nazwa firmy</h4>
-            <p>Stanowisko: ...</p>
-            <p>Okres: ...</p>
-            <p>Opis obowiązków:</p>
-        </li>
-        </ul>
-
-    <h3>Umiejętności</h3>
-    <ul>
-        <li>Umiejętność 1</li>
-        <li>Umiejętność 2</li>
-        </ul>
-
-    <h3>Edukacja</h3>
-    <ul>
-        <li>
-            <h4>Nazwa uczelni</h4>
-            <p>Kierunek studiów: ...</p>
-            <p>Okres: ...</p>
-        </li>
-        </ul>
+    <div class="cv-container">
+        <div class="sidebar">
+            <div class="photo-placeholder"></div>
+            <p><i class="fas fa-envelope icon"></i>aleksandra.piskorz02@gmail.com</p>
+            <p><i class="fas fa-phone icon"></i>+48 123 456 789</p>
+            <p><i class="fas fa-home icon"></i>Warszawa, Polska</p>
+            <div class="languages">
+                <h2>JĘZYKI</h2>
+                <ul>
+                    <li>Angielski - C1</li>
+                    <li>Niemiecki - B1</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Aleksandra Piskorz</h1>
+            <p style="text-align: justify; font-size: 0.7em; color: #666; margin-top: 10px;">Jestem pracownikiem Zakładu z rocznym stażem na stanowisku ds.
+                wsparcia w Wydziale Obsługi Prawnej. Znam potrzeby oraz
+                organizację pracy w tej komórce. Ponadto jestem studentką
+                informatyki, z tego względu chciałabym rozwijać swoje kompetencje
+                i wiedzę w tym kierunku jednocześnie kontynuując pracę w
+                Zakładzie.
+                </p>
+            <div class="section">
+                <h2>Doświadczenie zawodowe</h2>
+                <ul>
+                    <li><strong>Stanowisko ds. wsparcia obsługi prawnej</strong></li>
+                    <li>Zakład Ubezpieczeń Społecznych (2022 - obecnie)</li>
+                    <li>obsługa administracyjno-biurowa komórki prawnej</li>
+                    <li>obsługa aplikacji SOP (rejestracja spraw, aktualizowanie w zakresie postępowania sądowego, zamykanie spraw)</li>
+                    <li>tworzenie statystyki kwartalnej Z06</li>
+                    <li>pisanie wniosków dot. księgowania kosztów procesowych</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Wykształcenie</h2>
+                <ul>
+                    <li><strong>Uniwersytet WSB Merito</strong></li>
+                    <li></li>
+                    <li>kierunek: Informatyka</li>
+                    <li>specjalizacja: Front-end developer</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Umiejętności</h2>
+                <div class="skills">
+                    <div class="skill">abcdef</div>
+                    <div class="skill">ghi</div>
+                    <div class="skill">jkl</div>
+                    <div class="skill">mnoprs</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
